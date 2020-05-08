@@ -66,7 +66,7 @@ autos = [
    {"brand": "Renault", "model": "Megane", "year": 1999, "price": 2300},
 
 ]
-autos.sort(key=lambda i: i['price'] if i['price'] != None else 0)
+autos.sort(key=lambda i: i['price'] if i['price'] is not None else 0)
 print(autos)
 
 def Lalamda(i):

@@ -6,15 +6,22 @@ a = []
 for i in range(100):
     a.append(random.randint(0, 10000))
 print(a)
-# print(a.index(a[2], 3))
 countelemen = 0
-countindex = 0
-for i in a:
+for i in range(len(a)):
     countbit = 0
-    for l in bin(a.index(i, countindex))[2:]:
+    for l in bin(i)[2:]:
         countbit = countbit + int(l)
     if countbit % 2 == 0:
-        countelemen = countelemen + i
-        print(countelemen)
-    countindex = countindex + 1
+        countelemen = countelemen + a[i]
 print(countelemen*a[-2])
+
+
+
+#     countbit = 0
+#     for l in bin(a.index(i, countindex))[2:]:
+#         countbit = countbit + int(l)
+#     if countbit % 2 == 0:
+#         countelemen = countelemen + i
+#         print(countelemen)
+#     countindex = countindex + 1
+# print(countelemen*a[-2])

@@ -4,7 +4,7 @@
 import random
 parol = ''
 for i in range(random.randrange(1, 100)):
-    parol = parol + '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'[random.randrange(0, 61)]
+    parol = parol + chr(random.randrange(0, 10000))
 print(parol)
 def Validpassw(a):
     count123 = 0
@@ -12,7 +12,7 @@ def Validpassw(a):
     if len(a) < 5:
         return False
     for i in a:
-        if i in 'QWERTYUIOPASDFGHJKLZXCVBNM':
+        if i not in '1234567890qwertyuiopasdfghjklzxcvbnm':
             return False
         if i in '1234567890':
             count123 = count123 + 1
